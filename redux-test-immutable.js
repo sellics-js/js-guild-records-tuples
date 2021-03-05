@@ -1,33 +1,32 @@
 
 import { createStore } from './redux';
 
-
 const initialState = {
-    people:[
-        {
-        id: 1,
-        name: 'Alex',
-        age: 35,
-        hobbies: [
-            'Chilis', 'Photography', 'Mongolian Throat Singing'
-        ]
-    }, {
-        id: 2,
-        name: 'Joe',
-        age: 24,
-        hobbies: [
-            'Beer', 'Pong', 'Beer Pong'
-        ]
-    },
+  people:[
     {
-        id: 3,
-        name: 'Bob',
-        age: 42,
-        hobbies: [
-            'Sleep', 'Stamps', 'Knitting'
-        ]
-    }
+    id: 1,
+    name: 'Alex',
+    age: 35,
+    hobbies: [
+        'Chilis', 'Photography', 'Mongolian Throat Singing'
     ]
+  }, {
+    id: 2,
+    name: 'Joe',
+    age: 24,
+    hobbies: [
+        'Beer', 'Pong', 'Beer Pong'
+    ]
+  },
+  {
+    id: 3,
+    name: 'Bob',
+    age: 42,
+    hobbies: [
+        'Sleep', 'Stamps', 'Knitting'
+    ]
+  }
+  ]
 }
 // REDUCERS
 const people = (state = initialState, action) => {
