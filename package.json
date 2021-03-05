@@ -1,0 +1,35 @@
+{
+  "name": "js-guild-records-tuples",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:sellics-js/js-guild-records-tuples.git",
+  "author": "Alex Percsi",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "@babel/cli": "^7.13.0",
+    "@babel/core": "^7.13.8",
+    "@babel/plugin-proposal-record-and-tuple": "^7.13.0",
+    "@babel/preset-env": "^7.13.9"
+  },
+  "dependencies": {
+    "@bloomberg/record-tuple-polyfill": "0.0.3",
+    "expect": "^26.6.2"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ],
+    "plugins": [
+      [
+        "@babel/plugin-proposal-record-and-tuple",
+        {
+          "syntaxType": "hash"
+        }
+      ]
+    ]
+  },
+  "scripts": {
+    "start": "func() { babel \"$1\" > index.out.js && node index.out.js;}; func"
+  }
+}
